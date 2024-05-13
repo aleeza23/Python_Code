@@ -1,10 +1,8 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
 
-        # with default value as 0
         hashmap_s = collections.defaultdict(int)
-
-        # base case
+      
         if len(s) != len(t):
             return False
 
@@ -15,7 +13,7 @@ class Solution:
         for char in t:
             if hashmap_s[char] == 0:
                 return False
-
+                
             hashmap_s[char] -= 1
 
         return True

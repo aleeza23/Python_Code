@@ -3,7 +3,6 @@ class Solution:
 
         # with default value as 0
         hashmap_s = collections.defaultdict(int)
-         
 
         # base case
         if len(s) != len(t):
@@ -17,7 +16,6 @@ class Solution:
             if hashmap_s[char] == 0:
                 return False
 
-            hashmap_s[char] -= 1                
+            hashmap_s[char] -= 1
 
-        return True         
-     
+        return True

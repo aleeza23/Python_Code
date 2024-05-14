@@ -14,15 +14,19 @@ class Solution:
 
 
         # another approach
-        hashmap = {}
-        ans = []
+        hashmap= {}
 
-        for i in range(len(nums) -1):
-            hashmap[(i, i + 1)] = nums[i] + nums[i + 1]
-            if hashmap[(i, i+1)] == target:
-                ans.append(i)
-                ans.append(i + 1)
-        return ans         
+        for i in range(len(nums)):
+            target_diff = target - nums[i]
+
+            if target_diff not in hashmap:
+                hashmap[nums[i]] = i
+            else:
+                return [hashmap[target_diff], i]   
+              
+           
+
+        
 
                
 

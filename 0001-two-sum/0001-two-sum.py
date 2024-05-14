@@ -13,7 +13,7 @@ class Solution:
 
 
 
-        # another approach
+        # another approach O(n) TC
         hashmap= {}
 
         for i in range(len(nums)):
@@ -22,12 +22,4 @@ class Solution:
             if target_diff not in hashmap:
                 hashmap[nums[i]] = i
             else:
-                return [hashmap[target_diff], i]   
-              
-           
-
-        
-
-               
-
-        
+                return [hashmap[target_diff], i] 

@@ -14,9 +14,5 @@ class Solution:
             for num in bucket[i]:
                 if len(result) != k:
                     result.append(num)
-        return result            
-
-                   
-            
-
+        return result
         

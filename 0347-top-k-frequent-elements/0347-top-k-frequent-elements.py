@@ -10,7 +10,7 @@ class Solution:
             bucket[freq].append(num)
 
         result = []         
-        for i in range(len(bucket) -1, 0, -1):
+        for i in reversed(range(len(bucket))):
             for num in bucket[i]:
                 if len(result) != k:
                     result.append(num)

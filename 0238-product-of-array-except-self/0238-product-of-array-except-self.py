@@ -15,23 +15,4 @@ class Solution:
             suffix_product *= nums[i]
             
         return ans_array  
-
-            
-
-
-
-             
-            
-
-
-
-
-
-
-
-
-
-
-
-
-        
+     

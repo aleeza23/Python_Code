@@ -6,6 +6,7 @@ class Solution:
 
         for r in range(len(board)):
             for c in range(len(board)):
+              
                 if board[r][c] == ".":
                     continue 
 
@@ -14,6 +15,6 @@ class Solution:
                 COLS[c].add(board[r][c])
                 ROWS[r].add(board[r][c])
                 SUB_BOXES[r // 3, c // 3].add(board[r][c])
-                print(ROWS)
+                
 
         return True

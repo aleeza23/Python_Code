@@ -3,20 +3,15 @@ class Solution:
         if len(nums) == 0:
             return 0
 
-     
-        count = 1
-        length = 0
-        
-        unique_nums = sorted(set(nums))
+        length = 0        
+        unique_nums = set(nums)        
       
-        for i in range(len(unique_nums) -1):
-                       
-            if unique_nums[i]+1 == unique_nums[i+1]:
-                count +=1
-
-            else:                
-                length = max(length,count)               
-                count = 1
-             
-        return max(length, count)
-        
+        for n in nums:
+            if (n -1) not in unique_nums:
+                count = 0
+                while (n + count) in unique_nums:
+                    count += 1
+                length = max(length, count)
+                count = 0
+                
+        return length        

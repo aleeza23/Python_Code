@@ -11,8 +11,7 @@ class Solution:
                 return False
             else:
                 left_p += 1
-                right_p -= 1
-                
+                right_p -= 1                
         return True             
     
 

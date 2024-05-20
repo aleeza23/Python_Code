@@ -12,14 +12,5 @@ class Solution:
             else:
                 left_p += 1
                 right_p -= 1                
-        return True             
-    
-
-
-
-            
-        
-
-        
-            
+        return True           
         

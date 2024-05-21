@@ -7,9 +7,10 @@ class Solution:
         while left_p < right_p:
             sum = numbers[left_p] + numbers[right_p]
 
-            if sum == target:
-                return [left_p + 1, right_p + 1]
-            elif sum > target:
+            if sum > target:
                 right_p -= 1
+
+            elif sum < target:
+                left_p  += 1
             else:
-                left_p  += 1     
+                return [left_p + 1, right_p + 1]

@@ -12,7 +12,7 @@ class Solution:
             elif sum > target:
                 right_p -= 1
             else:
-                left  += 1         
+                left_p  += 1         
 
 
 

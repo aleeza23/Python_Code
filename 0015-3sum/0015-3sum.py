@@ -9,39 +9,20 @@ class Solution:
 
             left_p = i + 1
             right_p = len(nums) - 1
-            
+
             while left_p < right_p:              
 
                 triplets = nums[i] + nums[left_p] + nums[right_p]
 
-                if triplets == 0:
-                    ans.append([nums[i] ,+ nums[left_p] , nums[right_p]]) 
-
-                    while left_p < right_p and nums[left_p] == nums[left_p + 1]:
-                        left_p  += 1
-
-                    while left_p < right_p and nums[right_p] == nums[right_p - 1]:
-                        right_p -= 1
+                if triplets < 0:
                     left_p += 1
-                    right_p -= 1    
+                elif triplets > 0 :
+                    right_p -= 1
 
-                elif triplets < 0:
-                    left_p += 1
                 else:
-                    right_p -= 1   
+                    ans.append([nums[i] , nums[left_p] , nums[right_p]])
+                    right_p -= 1
 
-
-
-
-
-           
-        return ans              
-
-
-
-
-
-
-       
-
-        
+                    while right_p < len(nums) and right_p > left_p and nums[right_p] == nums[right_p + 1]:
+                        right_p -= 1
+        return ans        

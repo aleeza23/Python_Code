@@ -22,7 +22,7 @@ class Solution:
                 else:
                     ans.append([nums[i] , nums[left_p] , nums[right_p]])
                     right_p -= 1
-
-                    while right_p < len(nums) and right_p > left_p and nums[right_p] == nums[right_p + 1]:
+                    while right_p > left_p and nums[right_p] == nums[right_p + 1]:
                         right_p -= 1
+
         return ans        

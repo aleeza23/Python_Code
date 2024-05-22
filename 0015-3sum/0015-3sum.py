@@ -18,7 +18,7 @@ class Solution:
                     left_p += 1
                 elif triplets > 0 :
                     right_p -= 1
-
+                    
                 else:
                     ans.append([nums[i] , nums[left_p] , nums[right_p]])
                     right_p -= 1

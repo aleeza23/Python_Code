@@ -8,9 +8,8 @@ class Solution:
                 continue 
 
             left_p = i + 1
-            right_p = len(nums) - 1 
-
-
+            right_p = len(nums) - 1
+            
             while left_p < right_p:              
 
                 triplets = nums[i] + nums[left_p] + nums[right_p]

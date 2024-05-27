@@ -4,10 +4,14 @@ class Solution:
         
         
         for str in strs:
-            array = [0]*26
+            array = [0] * 26
+            print(ord("b"))            
 
             for c in str:
+               
                 array[ord(c) - ord("a")] += 1
+                print(array)
             lookup[tuple(array)].append(str)
+            
               
         return lookup.values()        

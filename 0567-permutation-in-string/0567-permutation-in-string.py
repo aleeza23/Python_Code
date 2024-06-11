@@ -31,7 +31,7 @@ class Solution:
         dect_s1 = collections.defaultdict(int)
         dect_s2 = collections.defaultdict(int)
 
-        if len(s1) < len(s2):
+        if len(s1) > len(s2):
             return False
 
         # Populate dect_s1 with the frequency of characters in s1

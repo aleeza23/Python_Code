@@ -26,7 +26,7 @@ class Solution:
                 return True
 
           
-            if j + window_size < len(s2) - len(s1) + 1:
+            if j + window_size < len(s2):
                 dect_s2[s2[j + window_size]] += 1
             
 

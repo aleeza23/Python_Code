@@ -37,11 +37,4 @@ class Solution:
            
             left_p = left_p.next
             right_p = right_p.next
-        return True             
-
-
-
-            
-
-
-        
+        return True  

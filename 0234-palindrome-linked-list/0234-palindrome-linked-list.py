@@ -17,15 +17,14 @@ class Solution:
             fast_p = fast_p.next.next
 
         # reverse list from slow_p/second half
-        temp = slow_p
+        curr = slow_p
         nextt = None
 
-        while temp:
-            next_node = temp.next
-            temp.next = nextt
-            nextt = temp
-            temp = next_node
-            
+        while curr:
+            next_node = curr.next
+            curr.next = nextt
+            nextt = curr
+            curr = next_node
 
         # comparing both half reversed & starting head
         left_p = head
@@ -34,7 +33,7 @@ class Solution:
         while right_p:
             if left_p.val != right_p.val:
                 return False
-           
+
             left_p = left_p.next
             right_p = right_p.next
-        return True  
+        return True

@@ -21,7 +21,7 @@ class Solution:
                 list2 = list2.next
             curr = curr.next
 
-            # Attaching the remaining nodes
+         # Attaching the remaining nodes
         if list1:
             curr.next = list1
         else:

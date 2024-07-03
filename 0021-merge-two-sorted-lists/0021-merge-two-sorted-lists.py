@@ -7,7 +7,8 @@ class Solution:
     def mergeTwoLists(
         self, list1: Optional[ListNode], list2: Optional[ListNode]
     ) -> Optional[ListNode]:
-
+       
+        # Creating the default node(0)
         mergerd_list = ListNode()
         curr = mergerd_list
 
@@ -20,12 +21,11 @@ class Solution:
                 curr.next = list2
                 list2 = list2.next
             curr = curr.next
-
+            
          # Attaching the remaining nodes
         if list1:
             curr.next = list1
-        else:
-            
+        else:            
             curr.next = list2
 
         # Return the merged list
